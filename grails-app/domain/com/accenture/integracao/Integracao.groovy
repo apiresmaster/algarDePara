@@ -16,9 +16,9 @@ class Integracao {
 
     }
     static constraints = {
-    	sistemaOrigem nullable:false, blank:false, maxSize:255, unique:['tipoInformacao','valorOrigem']
-    	tipoInformacao nullable:false, blank:false, maxSize:255
-    	valorOrigem nullable:false, blank:false, maxSize:255
-    	valorDestino nullable:false, blank:false, maxSize:255
+    	sistemaOrigem nullable:false, blank:false, maxSize:255, widget: 'textfield', unique:['tipoInformacao','valorOrigem']
+    	tipoInformacao nullable:false, blank:false, maxSize:255, widget: 'textfield'
+    	valorOrigem nullable:false, blank:false, maxSize:255, widget: 'textfield'
+    	valorDestino nullable:false, blank:false, maxSize:255, widget: 'textfield'
     }
 }
