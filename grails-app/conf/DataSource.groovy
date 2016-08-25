@@ -21,16 +21,16 @@ environments {
             //dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
             //url = "jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
             
-            dbCreate = "create-drop"
+            dbCreate = "update"
             username = "algar_user"
             password = "algar_user"
             
-            //url = "jdbc:sqlserver://10.20.86.101;databaseName=arc_algar_depara;instanceName=sql2k801"
-            //driverClassName = "com.microsoft.sqlserver.jdbc.SQLServerDriver"
-            //dialect = "org.hibernate.dialect.SQLServerDialect"
+            url = "jdbc:sqlserver://10.20.86.101;databaseName=arc_algar_depara;instanceName=sql2k801"
+            driverClassName = "com.microsoft.sqlserver.jdbc.SQLServerDriver"
+            dialect = "org.hibernate.dialect.SQLServerDialect"
 
-            url = "jdbc:mysql://localhost/arc_algar_depara"
-            driverClassName = "com.mysql.jdbc.Driver"
+            //url = "jdbc:mysql://localhost/arc_algar_depara"
+            //driverClassName = "com.mysql.jdbc.Driver"
 
         }
     }
