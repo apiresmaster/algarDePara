@@ -7,7 +7,7 @@
 		<g:message code="integracao.sistemaOrigem.label" default="Sistema Origem" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="sistemaOrigem" maxlength="50" required="" value="${integracaoInstance?.sistemaOrigem}"/>
+	<g:select id="sistemaOrigem" name="sistemaOrigem.id" from="${com.accenture.integracao.Sistema.list()}" optionKey="id" required="" value="${integracaoInstance?.sistemaOrigem?.id}" class="many-to-one"/>
 
 </div>
 

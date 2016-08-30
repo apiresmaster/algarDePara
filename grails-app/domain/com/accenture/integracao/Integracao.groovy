@@ -2,14 +2,14 @@ package com.accenture.integracao
 
 class Integracao {
 
-	String sistemaOrigem
+	Sistema sistemaOrigem
 	String valorOrigem
 	String valorDestino
     TipoInformacao tipoInformacao
 
     static mapping = {
         table "tbIntegracaoDePara"
-        sistemaOrigem column: "SistemaOrigem"
+        sistemaOrigem column: "SistemaOrigemId"
         valorOrigem column: "ValorOrigem"
         valorDestino column: "ValorDestino"
         tipoInformacao column: "TipoInformacaoId"
