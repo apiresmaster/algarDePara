@@ -40,7 +40,7 @@ body {
 	background: #ffffff;
 	color: #333333;
 	margin: 0 auto;
-	max-width: 1200px;
+	max-width: 960px;
 	overflow-x: hidden; /* prevents box-shadow causing a horizontal scrollbar in firefox when viewport < 960px wide */
 	   -moz-box-shadow: 0 0 0.3em #255b17;
 	-webkit-box-shadow: 0 0 0.3em #255b17;
@@ -49,7 +49,8 @@ body {
 
 #grailsLogo {
 	/*background-color: #abbf78;*/
-	background-color: #B2B2FF;
+	/*background-color: #B2B2FF;*/
+
 }
 
 /* replace with .no-boxshadow body if you have modernizr available */
@@ -114,7 +115,7 @@ p {
 
 .footer {
 	/*background: #abbf78;*/
-	background: #B2B2FF;
+	/*background: #B2B2FF;*/
 	color: #000;
 	clear: both;
 	font-size: 0.8em;
@@ -605,35 +606,42 @@ a.skip {
 Menu do sistema incluso a parte
 autor: Alexandre Pires;
 */
-#menu {
-	min-width: 100%;
-	min-height: 50px;
-
-}
-
 #menu ul {
-	padding: 0px;
-	margin: 7px;
-	list-style: none;
+	padding:0px;
+	margin:0px;
+	padding-left: 5px;
+	/*background-color:#EDEDED;*/
+	background-color: #6666ff;
+	list-style:none;
+	height: 60px;
+	width: 100%;
+
 }
 
-#menu ul li {
-
+/*DEIXA O MENU COMO UMA BARRA, EM LINHA*/
+#menu ul li { 
 	display: inline;
-	font-size: 18px;
 }
 
 #menu ul li a {
-	padding: 6px 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 20px;
 	display: inline-block;
-	
+	font-size: 18px;
+	font-weight: bold;
+ 
 	/* visual do link */
-	color: #333;
+	/*background-color:#EDEDED;*/
+	background-color: #6666ff;
+	color: #ffffff;
 	text-decoration: none;
+	/*border-bottom:3px solid #EDEDED;*/
+	border-bottom:3px solid #6666ff;
 }
 
 #menu ul li a:hover {
-	border-radius: 10px;
-	background-color: #B2B2FF;
-	color: D6D6D6;
+	/*background-color:#D6D6D6;*/
+	/*color: #6D6D6D;*/
+	border-bottom:3px solid #EA0000;
 }

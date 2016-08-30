@@ -7,15 +7,6 @@
 		<title><g:message code="default.edit.label" args="[entityName]" /></title>
 	</head>
 	<body>
-		<div id="menu">
-			<ul>
-				<li>
-					<g:link controller="tipoInformacao" action="index">Tipo Informação</g:link></li>
-				<li>
-					<g:link controller="integracao" action="index">Parametrizações</g:link></li>
-				</li>
-			</ul>
-		</div>
 
 		<div id="edit-tipoInformacao" class="content scaffold-edit" role="main">
 			<h1><g:message code="tipoInformacao.edit.label" args="[entityName]" /></h1>

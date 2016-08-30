@@ -10,16 +10,6 @@
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
 	</head>
 	<body>
-		<div id="menu">
-			<ul>
-				<li>
-					<g:link controller="tipoInformacao" action="index">Tipo Informação</g:link></li>
-				<li>
-					<g:link controller="integracao" action="index">Parametrizações</g:link></li>
-				</li>
-			</ul>
-		</div>
-
 		<a href="#list-tipoInformacao" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div class="nav" role="navigation">
 			<ul>

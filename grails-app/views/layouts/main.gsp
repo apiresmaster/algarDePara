@@ -15,11 +15,20 @@
   		<asset:stylesheet src="application.css"/>
 		<asset:javascript src="application.js"/>
 		<g:layoutHead/>
+				<nav id="menu">
+			<ul>
+				<li><g:link controller="tipoInformacao" action="index">Tipo Informação</g:link></li>
+				<li><g:link controller="integracao" action="index">Parametrizações</g:link></li>
+			</ul>
+		</nav>
 	</head>
 	<body>
-		<div id="grailsLogo" role="banner">
+
+
+		<div id="grailsLogo">
 			<a href="http://accenture.com.br"><asset:image src="grails_logo.png" alt="Accenture"/></a>
 		</div>
+
 		<g:layoutBody/>
 		<div class="footer" role="contentinfo"></div>
 		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>

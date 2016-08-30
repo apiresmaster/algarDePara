@@ -6,15 +6,6 @@
 		<title><g:message code="default.create.label" args="[entityName]" /></title>
 	</head>
 	<body>
-		<div id="menu">
-			<ul>
-				<li>
-					<g:link controller="tipoInformacao" action="index">Tipo Informação</g:link></li>
-				<li>
-					<g:link controller="integracao" action="index">Parametrizações</g:link></li>
-				</li>
-			</ul>
-		</div>
 
 		<div id="create-tipoInformacao" class="content scaffold-create" role="main">
 			<h1><g:message code="tipoInformacao.create.label" args="[entityName]" /></h1>
