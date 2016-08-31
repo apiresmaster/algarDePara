@@ -1,7 +1,7 @@
 class BootStrap {
 
     def init = { servletContext ->
-        
+        /*
     	new com.accenture.integracao.Integracao(sistemaOrigem:'sys1', tipoInformacao:'tp1', valorOrigem:'vl1', valorDestino:'vl2').save();
     	new com.accenture.integracao.Integracao(sistemaOrigem:'sys1', tipoInformacao:'tp1', valorOrigem:'vl1', valorDestino:'vl23').save();
     	new com.accenture.integracao.Integracao(sistemaOrigem:'sys1', tipoInformacao:'tp1', valorOrigem:'vl1', valorDestino:'vl24').save();
@@ -17,7 +17,7 @@ class BootStrap {
     	new com.accenture.integracao.Integracao(sistemaOrigem:'sys2', tipoInformacao:'tp1', valorOrigem:'vl17', valorDestino:'vl2').save();
     	new com.accenture.integracao.Integracao(sistemaOrigem:'sys2', tipoInformacao:'tp1', valorOrigem:'vl18', valorDestino:'vl2').save();
     	new com.accenture.integracao.Integracao(sistemaOrigem:'sys2', tipoInformacao:'tp1', valorOrigem:'vl19', valorDestino:'vl2').save();
-        
+        */
     }
     def destroy = {
     }

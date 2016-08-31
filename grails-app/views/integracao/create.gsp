@@ -7,26 +7,36 @@
 	</head>
 	<body>
 
+		<div class="page-header">
+	    	<h2><g:message code="integracao.create.title" args="[entityName]" /></h2>
+		</div>
+
 		<div id="create-integracao" class="content scaffold-create" role="main">
-			<h1><g:message code="default.create.label" args="[entityName]" /></h1>
 			<g:if test="${flash.message}">
-			<div class="message" role="status">${flash.message}</div>
+				<div class="message" role="status">${flash.message}</div>
 			</g:if>
 			<g:hasErrors bean="${integracaoInstance}">
-			<ul class="errors" role="alert">
-				<g:eachError bean="${integracaoInstance}" var="error">
-				<li <g:if test="${error in org.springframework.validation.FieldError}">data-field-id="${error.field}"</g:if>><g:message error="${error}"/></li>
-				</g:eachError>
-			</ul>
+				<div class="alert alert-error">
+					<ul class="errors" role="alert">
+						<g:eachError bean="${integracaoInstance}" var="error">
+							<li <g:if test="${error in org.springframework.validation.FieldError}">data-field-id="${error.field}"</g:if>><strong>Atenção: </strong><g:message error="${error}"/></li>
+						</g:eachError>
+					</ul>
+				</div>
 			</g:hasErrors>
-			<g:form url="[resource:integracaoInstance, action:'save']" >
-				<fieldset class="form">
-					<g:render template="form"/>
-				</fieldset>
-				<fieldset class="buttons">
-					<g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />
-				</fieldset>
-			</g:form>
 		</div>
+
+			<g:form class="form-horizontal" url="[resource:integracaoInstance, action:'save']" >
+				<fieldset>
+					<g:render template="form"/>
+
+					<div class="control-group">
+						<div class="controls">
+							<g:submitButton name="create" class="btn btn-primary btn-lg active" role="button" value="${message(code: 'integracao.button.save', default: 'Create')}" />
+						</div>
+					</div>	
+				</fieldset>	
+			</g:form>
+		
 	</body>
 </html>
