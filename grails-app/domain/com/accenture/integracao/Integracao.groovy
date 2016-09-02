@@ -2,6 +2,7 @@ package com.accenture.integracao
 
 class Integracao {
 
+    Date data
 	SistemaOrigem sistemaOrigem
 	TipoInformacao tipoInformacao
 	String valorOrigem

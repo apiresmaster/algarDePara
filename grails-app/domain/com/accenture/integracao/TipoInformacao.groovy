@@ -2,6 +2,7 @@ package com.accenture.integracao
 
 class TipoInformacao {
 
+    Date data
 	String nome
 
     static mapping = {
