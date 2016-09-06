@@ -1,22 +1,11 @@
 <%@ page import="com.accenture.integracao.TipoInformacao" %>
 
-
-
-<div class="fieldcontain ${hasErrors(bean: tipoInformacaoInstance, field: 'nome', 'error')} required">
-	<label for="nome">
-		<g:message code="tipoInformacao.nome.label" default="Nome" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:textField name="nome" maxlength="50" required="" value="${tipoInformacaoInstance?.nome}"/>
-
+<div class="form-group">
+  <label for="nome" class="col-sm-2 control-label">
+  	<g:message code="tipoInformacao.nome.label" default="Nome" />
+  </label>
+  <div class="col-sm-10">
+    <g:textField name="nome" maxlength="50" class="form-control" id="nome" placeholder="nome do Tipo Informação" value="${tipoInformacaoInstance?.nome}"/>
+    <span id="helpBlock" class="help-block">Informe o nome do Tipo de Informação que será incluso.</span>
+  </div>
 </div>
-
-<div class="fieldcontain ${hasErrors(bean: tipoInformacaoInstance, field: 'data', 'error')} required">
-	<label for="data">
-		<g:message code="tipoInformacao.data.label" default="Data" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:datePicker name="data" precision="day"  value="${tipoInformacaoInstance?.data}"  />
-
-</div>
-

@@ -39,13 +39,6 @@
 				</tbody>
 			</table>
 			<!-- /paginacao -->
-			<nav aria-label="...">
-				<ul class="pager">
-			  		<li><a href="#">Anterior</a></li>
-			  		<li><a href="#">Próximo</a></li>
-				</ul>
-			</nav>
-
 			<div class="pagination">
 				<g:paginate total="${tipoInformacaoInstanceCount ?: 0}" />
 			</div>

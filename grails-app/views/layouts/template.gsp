@@ -9,23 +9,30 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="${assetPath(src: 'accenture_risk-control.ico')}" type="image/x-icon">
+    <link rel="shortcut icon" href="${resource(dir:'images', file:'accenture_risk-control.ico')}" type="image/x-icon">
+    <!--link rel="shortcut icon" href="${assetPath(src: 'accenture_risk-control.ico')}" type="image/x-icon"-->
 
     <title><g:layoutTitle default="Grails"/></title>
     
+
     <!-- Bootstrap core CSS -->
-    <asset:stylesheet src="boostrap/css/bootstrap.min.css"/>
+    <link rel= "stylesheet" href= "${resource(dir:'css', file:'bootstrap.min.css')}" />
+    <!--asset:stylesheet src="boostrap/css/bootstrap.min.css"/-->
     <!-- Bootstrap theme -->
-    <asset:stylesheet src="boostrap/css/bootstrap-theme.min.css"/>
+    <link rel= "stylesheet" href= "${resource(dir:'css', file:'bootstrap-theme.min.css')}" />
+    <!--asset:stylesheet src="boostrap/css/bootstrap-theme.min.css"/-->
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <asset:stylesheet src="boostrap/css/ie10-viewport-bug-workaround.css"/>
+    <link rel= "stylesheet" href= "${resource(dir:'css', file:'ie10-viewport-bug-workaround.css')}" />
+    <!--asset:stylesheet src="boostrap/css/ie10-viewport-bug-workaround.css"/-->
 
     <!-- Custom styles for this template -->
-    <asset:stylesheet src="boostrap/css/theme.css"/>
+    <link rel= "stylesheet" href= "${resource(dir:'css', file:'theme.css')}" />
+    <!--asset:stylesheet src="boostrap/css/theme.css"/-->
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <asset:javascript src="boostrap/js/ie-emulation-modes-warning.js"/>
+    <script type="text/javascript" src="${resource(dir:'js', file:'ie-emulation-modes-warning.js')}"></script>
+    <!--asset:javascript src="boostrap/js/ie-emulation-modes-warning.js"/-->
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -54,17 +61,17 @@
             <li class="active dropdown">
               <a href="http://getbootstrap.com/examples/theme/#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Parametrização <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><g:link controller="integracao" action="index">Listar Cadastrados</g:link></li>
+                <li><g:link controller="integracao" action="index"><g:message code="menu.list.title"/></g:link></li>
                 <li role="separator" class="divider"></li>
-                <li><g:link controller="integracao" action="create">Novo</g:link></li>
+                <li><g:link controller="integracao" action="create"><g:message code="menu.create.title"/></g:link></li>
               </ul>
             </li>
             <li class="dropdown">
               <a href="http://getbootstrap.com/examples/theme/#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tipo Informação <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><g:link controller="tipoInformacao" action="index">Listar Cadastrados</g:link></li>
+                <li><g:link controller="tipoInformacao" action="index"><g:message code="menu.list.title"/></g:link></li>
                 <li role="separator" class="divider"></li>
-                <li><g:link controller="tipoInformacao" action="create">Novo</g:link></li>
+                <li><g:link controller="tipoInformacao" action="create"><g:message code="menu.create.title"/></g:link></li>
               </ul>
             </li>
           </ul>
@@ -77,7 +84,7 @@
       <g:layoutBody/>
 
     </div> <!-- /container -->
-
+    <asset:javascript src="boostrap/js/bootstrap.min.js"/>
     <script type="text/javascript" src="${resource(dir:'js',file:'jquery.min.js')}"></script>
     <script type="text/javascript" src="${resource(dir:'js',file:'bootstrap.min.js')}"></script>
     <script type="text/javascript" src="${resource(dir:'js',file:'docs.min.js')}"></script>
