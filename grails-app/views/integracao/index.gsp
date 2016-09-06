@@ -56,17 +56,20 @@
 					</g:each>
 				</tbody>
 			</table>
+			<br/>
+			<br/>
 			<!-- /paginacao -->
 			<nav aria-label="...">
-				<ul class="pager">
-			  		<li><a href="#">Anterior</a></li>
-			  		<li><a href="#">Próximo</a></li>
+				<ul class="pager pagination-lg">
+
+			  		<li ${(params.offset == null || Integer.parseInt(params.offset) <= 0) ? 'class=disabled' : ' '}>
+			  			<g:link controller="integracao" params="[max:params.max,offset:(params.offset == null) ? 0 : Integer.parseInt(params.offset) - params.max]">Anterior</g:link>
+			  		</li>
+
+			  		<li ${integracaoInstanceList?.size() < params.max ? 'class=disabled' : ' '}>
+			  			<g:link controller="tipoInformacao" params="[max:params.max,offset:(params.offset == null || params.offset == 0) ? params.max : Integer.parseInt(params.offset) + params.max]">Próximo</g:link>
+			  		</li>
 				</ul>
 			</nav>
-			
-			<div class="pagination">
-				<g:paginate total="${integracaoInstanceCount ?: 0}" />
-			</div>
-		
 	</body>
 </html>
