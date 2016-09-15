@@ -8,7 +8,7 @@ class UrlMappings {
         }
 
         //"/"(view:"/index")
-        "/" (controller: 'Integracao', action: 'index')
         "500"(view:'/error')
+        "/index.gsp" (controller: 'Integracao', action: 'index')
 	}
 }

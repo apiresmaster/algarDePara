@@ -29,6 +29,8 @@ class IntegracaoController {
             notFound()
             return
         }
+        
+        integracaoInstance = checkCompraVenda(integracaoInstance)
 
         if (integracaoInstance.hasErrors()) {
             respond integracaoInstance.errors, view:'create'
@@ -56,7 +58,9 @@ class IntegracaoController {
             notFound()
             return
         }
-
+        
+        integracaoInstance = checkCompraVenda(integracaoInstance)
+        
         if (integracaoInstance.hasErrors()) {
             respond integracaoInstance.errors, view:'edit'
             return
@@ -100,5 +104,13 @@ class IntegracaoController {
             }
             '*'{ render status: NOT_FOUND }
         }
+    }
+
+    protected Integracao checkCompraVenda(Integracao integracaoInstance) {
+        def list = ['compra', 'venda']
+        if (integracaoInstance.tipoInformacao.nome.equals('CompraVenda') && !list.contains(integracaoInstance.valorDestino)) {
+            integracaoInstance.errors.reject('TESTE', message(code: 'integracao.validator.tipoInformacaoValorDestino.message'))
+        }
+        return integracaoInstance
     }
 }

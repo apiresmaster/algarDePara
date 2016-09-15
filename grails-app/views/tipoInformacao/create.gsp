@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta name="layout" content="template">
-		<g:set var="entityName" value="${message(code: 'tipoInformacao.label', default: 'TipoInformacao')}" />
+		<g:set var="entityName" value="${message(code: 'tipoInformacao.label', default: 'Tipo Informação')}" />
 		<title><g:message code="default.create.label" args="[entityName]" /></title>
 	</head>
 	<body>
@@ -23,7 +23,8 @@
 					<div class="form-group">
 					  <div class="col-sm-offset-2 col-sm-10">
 					    <button name="create" class="btn btn-primary btn-lg">
-					      <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> ${message(code: 'default.button.create.label', default: 'Create')}
+					      <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+					      <g:message code="default.button.create.label" args="[entityName]" />
 					    </button>
 					    <g:link class="btn btn-default btn-lg" controller="tipoInformacao" action="index"> Cancelar</g:link>
 

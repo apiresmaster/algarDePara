@@ -2,7 +2,7 @@ package com.accenture.integracao
 
 class SistemaOrigem {
 
-    Date data
+    Date data = new Date()
 	String nome
 
     static mapping = {

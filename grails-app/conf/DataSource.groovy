@@ -19,14 +19,15 @@ environments {
     development {
         dataSource {
             //dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
+            dbCreate = "update"
+            //username = "sa"
+            //password = ""
+            //driverClassName = "org.h2.Driver"
             //url = "jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
             
-            dbCreate = "update"
             username = "algar_user"
             password = "algar_user"
-            
             url = "jdbc:sqlserver://10.20.86.101;databaseName=arc_algar_depara;instanceName=sql2k801"
-            //url = "jdbc:sqlserver://127.0.0.1:1434;databaseName=arc_algar_depara;instanceName=local"
             driverClassName = "com.microsoft.sqlserver.jdbc.SQLServerDriver"
             dialect = "org.hibernate.dialect.SQLServerDialect"
 
@@ -43,8 +44,14 @@ environments {
     }
     production {
         dataSource {
+            //jndiName = "java:comp/env/jdbcMSSqlDev"
             dbCreate = "update"
-            url = "jdbc:h2:prodDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
+            //url = "jdbc:h2:prodDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
+            username = "riskcontrol_integra"
+            password = "Accenture01"
+            url = "jdbc:sqlserver://192.168.34.19;databaseName=RISKCONTROL-INTEGRA"
+            driverClassName = "com.microsoft.sqlserver.jdbc.SQLServerDriver"
+            dialect = "org.hibernate.dialect.SQLServerDialect"
             properties {
                // See http://grails.org/doc/latest/guide/conf.html#dataSource for documentation
                jmxEnabled = true

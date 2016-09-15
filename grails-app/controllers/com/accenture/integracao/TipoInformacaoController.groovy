@@ -80,8 +80,18 @@ class TipoInformacaoController {
             notFound()
             return
         }
-
-        tipoInformacaoInstance.delete flush:true
+        def integracao = Integracao.findAll("from Integracao i where i.tipoInformacao=?", [tipoInformacaoInstance])
+        
+        if (integracao.size()){
+            flash.message = message(code: 'default.deleted.relationship.message', args: [message(code: 'TipoInformacao.label', default: 'TipoInformacao'), tipoInformacaoInstance.id])
+            flash.args = ["hasErrors"]
+            redirect(action:"index")
+            return
+        }else{
+            tipoInformacaoInstance.delete flush:true
+        }
+       
+        
 
         request.withFormat {
             form multipartForm {

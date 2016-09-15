@@ -23,8 +23,8 @@
 			</g:if>
 			
 				<dl class="dl-horizontal">
-				    <dt><g:message code="integracao.sistemaOrigem.label" default="Sistema Origem" /></dt>
-				    	<dd><g:link controller="sistemaOrigem" action="show" id="${integracaoInstance?.sistemaOrigem?.id}">${integracaoInstance?.sistemaOrigem?.encodeAsHTML()}</g:link></dd>
+				    <dt><g:message code="sistemaOrigem.title" default="Sistema Origem" /></dt>
+				    	<dd><g:fieldValue bean="${integracaoInstance?.sistemaOrigem}" field="nome"/></dd>
 				    <dt><g:message code="integracao.tipoInformacao.label" default="Tipo Informacao" /></dt>
 				    	<dd><g:link controller="tipoInformacao" action="show" id="${integracaoInstance?.tipoInformacao?.id}">${integracaoInstance?.tipoInformacao?.encodeAsHTML()}</g:link></dd>
 				    <dt><g:message code="integracao.valorOrigem.label" default="Valor Origem" /></dt>
@@ -34,9 +34,13 @@
 				</dl>
 			
 			<br/>
-
+			<br/>
 			<g:form url="[resource:integracaoInstance, action:'delete']" method="DELETE">
 				<fieldset>
+			  		<g:link class="btn btn-success btn-lg" controller="Integracao" action="create">
+						<span class="glyphicon glyphicon-plus" aria-hidden="true"></span> <g:message code="default.button.new.label" args="[entityName]" />
+		  			</g:link>
+
 					<g:link class="btn btn-default btn-lg" action="edit" resource="${integracaoInstance}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
 
 					<g:actionSubmit class="btn btn-danger btn-lg" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />

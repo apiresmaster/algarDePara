@@ -30,8 +30,11 @@
 				    	<dd><g:fieldValue bean="${tipoInformacaoInstance}" field="nome"/></dd>
 				</dl>
 			<br/>
-			
+			<br/>
 			<g:form url="[resource:tipoInformacaoInstance, action:'delete']" method="DELETE">
+			  		<g:link class="btn btn-success btn-lg" controller="tipoInformacao" action="create">
+						<span class="glyphicon glyphicon-plus" aria-hidden="true"></span> <g:message code="default.button.new.label" args="[entityName]" />
+		  			</g:link>
 
 				    <g:link class="btn btn-default btn-lg" action="edit" resource="${tipoInformacaoInstance}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
 
